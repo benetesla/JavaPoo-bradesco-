@@ -1,6 +1,6 @@
 ## JAVA  "Avançado" Fundação bradesco
 
-Repositório público do curso de "Avançado" de java da fundação bradesco.
+Repositório público do curso de java "Avançado" de java da fundação bradesco.
 
 Este repositório é a junção dos meus estudos da linguagem de programação java da oferecidos pela fundação bradesco.
 
