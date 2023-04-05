@@ -1,14 +1,14 @@
 package br.com.meuprojeto;
 
 public class Animal {
-    private String nome;
-    private String raca;
-    private int idade;
+    protected static String nome;
+    protected static String raca;
+    protected static int idade;
 
     public Animal(String nome, String raca, int idade) {
-        this.nome = nome;
-        this.raca = raca;
-        this.idade = idade;
+        Animal.nome = nome;
+        Animal.raca = raca;
+        Animal.idade = idade;
     }
 
     public String getNome() {
@@ -16,7 +16,7 @@ public class Animal {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        Animal.nome = nome;
     }
 
     public String getRaca() {
@@ -24,7 +24,7 @@ public class Animal {
     }
 
     public void setRaca(String raca) {
-        this.raca = raca;
+        Animal.raca = raca;
     }
 
     public int getIdade() {
@@ -32,11 +32,7 @@ public class Animal {
     }
 
     public void setIdade(int idade) {
-        this.idade = idade;
+        Animal.idade = idade;
     }
 
-    @Override
-    public String toString() {
-        return "Animal [idade=" + idade + ", nome=" + nome + ", raca=" + raca + "]";
-    }
 }

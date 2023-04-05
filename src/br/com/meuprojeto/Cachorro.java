@@ -3,7 +3,7 @@ package br.com.meuprojeto;
 public class Cachorro  extends Animal{
     private int quantidadeDePatas;
 
-    public Cachorro(String nome, String raca, int idade) {
+    public Cachorro() {
         super(nome, raca, idade);
     }
 
