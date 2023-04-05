@@ -35,4 +35,8 @@ public class Animal {
         Animal.idade = idade;
     }
 
+    @Override
+    public String toString() {
+        return "Animal [idade=" + idade + ", nome=" + nome + ", raca=" + raca + "]";
+    }
 }

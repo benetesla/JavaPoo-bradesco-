@@ -19,5 +19,9 @@ public class Cachorro  extends Animal{
     public void correr() {
         System.out.println("Correndo");
     }
+    @Override
+    public String toString() {
+        return "Cachorro [quantidadeDePatas=" + quantidadeDePatas + "]";
+    }
 
 }
