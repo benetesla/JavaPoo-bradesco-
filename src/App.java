@@ -1,4 +1,4 @@
-
+import br.com.meuprojeto.Funcionario;
 import br.com.meuprojeto.Cachorro;
 import br.com.meuprojeto.Gato;
 public class App {
@@ -39,5 +39,12 @@ public class App {
         gato.miar();
         gato.correr();
         System.out.println(gato.getNome() + " " + gato.getRaca() + " " + gato.getIdade() + " " + gato.getHabilidadeDePular() + " " + gato.getHabitos());
+    
+        //funcionario
+        Funcionario funcionario = new Funcionario();
+        funcionario.setNome("João");
+        funcionario.setAtivo(true);
+
+        System.out.println(funcionario.getNome() + " " + funcionario.isAtivo());
     }
 }
