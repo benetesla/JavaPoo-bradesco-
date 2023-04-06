@@ -1,7 +1,6 @@
 package br.com.meuprojeto;
 import javax.swing.JFrame;
-public interface Jframe {
-    
+public interface Jframe {    
     public static void main(String[] args) {
         JFrame janela = new JFrame();
         janela.setTitle("Minha primeira janela");
