@@ -26,11 +26,10 @@ public class CastingDeTipos {
             i++;
         }
         //o do while executa pelo menos uma vez
-        int j = 11;
+        int j = 11;        
         do {
             System.out.println("j tem o valor: " + j);
             j++;
         } while (j < 10);
-
     }
 }
