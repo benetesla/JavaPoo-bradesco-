@@ -20,13 +20,13 @@ public class CastingDeTipos {
         for (int i = 0; i < 10; i++) {
             System.out.println("i tem o valor: " + i);
         }
-        int i = 11;
+        int i = 0;
         while (i < 10) {
             System.out.println("i tem o valor: " + i);
             i++;
         }
         //o do while executa pelo menos uma vez
-        int j = 0;
+        int j = 11;
         do {
             System.out.println("j tem o valor: " + j);
             j++;
