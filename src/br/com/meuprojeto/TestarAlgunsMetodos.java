@@ -33,6 +33,13 @@ public class TestarAlgunsMetodos {
         conta2.transferir(conta, 400);
         System.out.println("Saldo após transferência: " + conta.getSaldo());
         System.out.println("Saldo após transferência: " + conta2.getSaldo());
+        System.out.println("-------------------------");
+        System.out.println("Saldo final da conta: " + conta2.getNumeroConta());
+        conta2.SaldoFinal();
+        System.out.println("-------------------------");
+        System.out.println("Saldo final da conta: " + conta.getNumeroConta());
+        conta.SaldoFinal();
+        System.out.println("-------------------------");
 
 
     }

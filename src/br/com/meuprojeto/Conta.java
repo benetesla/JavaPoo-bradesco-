@@ -1,6 +1,5 @@
 package br.com.meuprojeto;
 public class Conta {
-
     private int numeroConta;
     private String nomeCliente;
     private double saldo;
