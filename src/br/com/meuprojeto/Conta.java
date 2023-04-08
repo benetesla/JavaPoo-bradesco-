@@ -12,8 +12,12 @@ public class Conta {
         this.saldo = saldo;
         this.limite = limite;
     }
-
+    
     public Conta() {
+        this.numeroConta = 0;
+        this.nomeCliente = "";
+        this.saldo = 0;
+        this.limite = 0;
     }
 
     public int getNumeroConta() {
@@ -42,28 +46,23 @@ public class Conta {
     }
 
     public void sacar(double valor) {
-        if (valor > 0 && valor <= this.saldo) {
-            this.saldo -= valor;
-        }
+        double novoSaldo = this.saldo - valor;
+        this.saldo = novoSaldo;
     }
     public void depositar(double valor) {
-        if (valor > 0) {
-            this.saldo += valor;
-        }
+        double deposito = this.saldo + valor;
+        this.saldo = deposito;
     }
 
     public void transferir(Conta contaDestino, double valor) {
-        if (valor > 0 && valor <= this.saldo) {
-            this.saldo -= valor;
-            contaDestino.saldo += valor;
-        }
+        double transferencia = this.saldo - valor;
+        this.saldo = transferencia;
+        contaDestino.depositar(valor);
     }
 
     public void SaldoFinal() {
-        if (this.saldo > 0) {
-            this.saldo += this.saldo;
-        }
-        
+        double saldoFinal = this.saldo;
+        System.out.println("Saldo final: " + saldoFinal);
     }
 
 
