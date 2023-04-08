@@ -60,17 +60,24 @@ public class Conta {
         this.saldo = deposito;
     }
 
-    public void transferir(Conta contaDestino, double valor) {
-        double transferencia = this.saldo - valor;
-        this.saldo = transferencia;
-        contaDestino.depositar(valor);
+    boolean transferir(Conta contaDestino, double valor) {
+        if (valor > this.saldo) {
+            System.out.println("Saldo insuficiente");
+            return false;
+        } else {
+            double transferencia = this.saldo - valor;
+            this.saldo = transferencia;
+            double transferencia2 = contaDestino.getSaldo() + valor;
+            contaDestino.setSaldo(transferencia2);
+            System.out.println("Transferência de " + valor + " reais da conta " + this.numeroConta + " para a conta " + contaDestino.getNumeroConta());
+            return true;
+        }
     }
 
     public void SaldoFinal() {
         double saldoFinal = this.saldo;
         System.out.println("Saldo final: " + saldoFinal);
     }
-
-
+    
 
 }
