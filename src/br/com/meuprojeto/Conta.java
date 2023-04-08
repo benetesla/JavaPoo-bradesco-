@@ -13,6 +13,9 @@ public class Conta {
         this.limite = limite;
     }
 
+    public Conta() {
+    }
+
     public int getNumeroConta() {
         return numeroConta;
     }
@@ -62,5 +65,7 @@ public class Conta {
         System.out.println("Saldo + Limite: " + (this.saldo + this.limite));
 
     }
+
+
 
 }

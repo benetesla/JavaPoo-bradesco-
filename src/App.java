@@ -6,32 +6,44 @@ import br.com.meuprojeto.Conta;
 
 public class App {
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null, "digite o numero da conta");
-        int numeroConta = Integer.parseInt(JOptionPane.showInputDialog("digite o numero da conta"));
-        JOptionPane.showMessageDialog(null, "digite o nome do cliente");
-        String nomeCliente = JOptionPane.showInputDialog("digite o nome do cliente");
-        JOptionPane.showMessageDialog(null, "digite o saldo");
-        double saldo = Double.parseDouble(JOptionPane.showInputDialog("digite o saldo"));
-        JOptionPane.showMessageDialog(null, "digite o limite");
-        double limite = Double.parseDouble(JOptionPane.showInputDialog("digite o limite"));
+        Conta conta = new Conta();
+        conta.setNumeroConta(123);      
+        conta.setSaldo(1200);
+        conta.setLimite(500);
+        conta.setNomeCliente("João");
 
-        Conta conta = new Conta(numeroConta, nomeCliente, saldo, limite);
+        JOptionPane.showMessageDialog(null, "NOME: " + conta.getNomeCliente());
+        JOptionPane.showMessageDialog(null, "SALDO: " + conta.getSaldo());
+        conta.sacar(100);
+        JOptionPane.showMessageDialog(null, "SALDO: " + conta.getSaldo());
+        conta.depositar(100);
+        JOptionPane.showMessageDialog(null, "SALDO: " + conta.getSaldo());
+        
+        Conta conta2 = new Conta();     
+        conta2.setNumeroConta(456);
+        conta2.setSaldo(1000);
+        conta2.setLimite(500);
+        conta2.setNomeCliente("Maria");
 
-        JOptionPane.showMessageDialog(null, "digite o valor do saque");
-        double valorSaque = Double.parseDouble(JOptionPane.showInputDialog("digite o valor do saque"));
-        conta.sacar(valorSaque);
+        JOptionPane.showMessageDialog(null, "NOME: " + conta2.getNomeCliente());
+        JOptionPane.showMessageDialog(null, "SALDO: " + conta2.getSaldo());
+        conta2.sacar(100);
+        JOptionPane.showMessageDialog(null, "SALDO: " + conta2.getSaldo());
+        conta2.depositar(100);
+        JOptionPane.showMessageDialog(null, "SALDO: " + conta2.getSaldo());
 
-        JOptionPane.showMessageDialog(null, "digite o valor do deposito");
-        double valorDeposito = Double.parseDouble(JOptionPane.showInputDialog("digite o valor do deposito"));
-        conta.depositar(valorDeposito);
+        conta.transferir(conta2, 100);
+        JOptionPane.showMessageDialog(null, "Transferência de 100 reais da conta 123 para a conta 456");
+        JOptionPane.showMessageDialog(null, "SALDO: " + conta.getSaldo());
 
-        JOptionPane.showMessageDialog(null, "digite o valor da transferencia");
-        double valorTransferencia = Double.parseDouble(JOptionPane.showInputDialog("digite o valor da transferencia"));
-        conta.transferir(conta, valorTransferencia);
+        conta2.transferir(conta, 100);
+        JOptionPane.showMessageDialog(null, "Transferência de 100 reais da conta 456 para a conta 123");
+        JOptionPane.showMessageDialog(null, "SALDO: " + conta2.getSaldo());
 
-        conta.imprimir();
+        //saldo de de todas as contas
+        JOptionPane.showMessageDialog(null, "SALDO FINAL CONTA  1 " + conta.getSaldo());
+        JOptionPane.showMessageDialog(null, "SALDO FINAL CONTA 2 " + conta2.getSaldo());
 
-
-
+   
     }
 }
