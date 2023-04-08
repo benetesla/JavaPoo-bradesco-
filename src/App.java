@@ -1,10 +1,9 @@
-
-
 import javax.swing.JOptionPane;
-
 import br.com.meuprojeto.Conta;
-
 public class App {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         Conta conta = new Conta();
         conta.setNumeroConta(123);      
@@ -41,8 +40,23 @@ public class App {
         JOptionPane.showMessageDialog(null, "SALDO: " + conta2.getSaldo());
 
         //saldo de de todas as contas
-        JOptionPane.showMessageDialog(null, "SALDO FINAL CONTA  1 " + conta.getSaldo());
-        JOptionPane.showMessageDialog(null, "SALDO FINAL CONTA 2 " + conta2.getSaldo());
+        
+        Conta[] contas = new Conta[3];
+        contas[0] = conta;
+        contas[1] = conta2;
+        contas[2] = new Conta(789, "José", 2000, 500);
+
+        for (int i = 0; i < contas.length; i++) {
+            JOptionPane.showMessageDialog(null, "NOME: " + contas[i].getNomeCliente());
+            JOptionPane.showMessageDialog(null, "SALDO: " + contas[i].getSaldo());
+        }
+
+        //saldo de todas as contas com foreach
+        for (Conta conta3 : contas) {
+            JOptionPane.showMessageDialog(null, "NOME: " + conta3.getNomeCliente());
+            JOptionPane.showMessageDialog(null, "SALDO: " + conta3.getSaldo());
+        }
+        
 
    
     }
