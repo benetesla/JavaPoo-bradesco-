@@ -12,7 +12,7 @@ public class TestarAlgunsMetodos {
         Conta conta2 = new Conta(456, "Maria", 1000, 500);
         System.out.println("NOME: " + conta2.getNomeCliente());
         System.out.println("SALDO: " + conta2.getSaldo());
-        conta2.sacar(100);
+        conta2.sacar(12000);
         System.out.println("SALDO: " + conta2.getSaldo());
         conta2.depositar(100);
         System.out.println("SALDO: " + conta2.getSaldo());

@@ -45,9 +45,15 @@ public class Conta {
         this.limite = limite;
     }
 
-    public void sacar(double valor) {
-        double novoSaldo = this.saldo - valor;
-        this.saldo = novoSaldo;
+    boolean sacar(double valor) {
+        if (valor > this.saldo) {
+            System.out.println("Saldo insuficiente");
+            return false;
+        } else {
+            double saque = this.saldo - valor;
+            this.saldo = saque;
+            return true;
+        }
     }
     public void depositar(double valor) {
         double deposito = this.saldo + valor;
