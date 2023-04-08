@@ -1,5 +1,4 @@
 package br.com.Arrays;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -24,7 +23,6 @@ public class Arrays {
         nomes.clear();
         System.out.println("Tamanho do arraylist: " + nomes.size());
         // linkedList
-
         LinkedList<String> nomes2 = new LinkedList<String>();
         nomes2.add("Paula");
         nomes2.add("Roberta");
@@ -38,11 +36,10 @@ public class Arrays {
             System.out.println("Nome na posição " + i + ": " + nomes2.get(i));
         }
         //percorrendo o arraylist com for each
-
         for (String nome : nomes2) {
             System.out.println("Nome: " + nome);
         }
-        // removendo um nome
+        //removendo um nome
         nomes2.remove(0);
         System.out.println("Nome na posição 0: " + nomes2.get(0));
         // removendo todos os nomes
