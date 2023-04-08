@@ -13,6 +13,8 @@ public class GerenciamentoEmpresa {
         f1.setDataEntrada("01/01/2018");
         f1.setRg("123456789");
         f1.setEstaNaEmpresa(true);
+        f1.recebeAumento(200);
+        
 
         Funcionario f2 = new Funcionario();
         f2.setNome("Maria");
@@ -21,9 +23,14 @@ public class GerenciamentoEmpresa {
         f2.setDataEntrada("01/01/2018");
         f2.setRg("987654321");
         f2.setEstaNaEmpresa(true);
+        f2.recebeAumento(100);
+       
+
 
         empresa.adiciona(f1);
+        f1.calculaGanhoAnual();
         empresa.adiciona(f2);
+        f2.calculaGanhoAnual();
 
     }
 }

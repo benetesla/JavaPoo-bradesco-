@@ -52,4 +52,9 @@ public class Funcionario {
         this.salario += aumento;
     }
 
+    public void calculaGanhoAnual() {
+        double ganhoAnual = this.salario * 12;
+        System.out.println("O ganho anual do funcionário é: " + ganhoAnual);
+    }
+
 }
