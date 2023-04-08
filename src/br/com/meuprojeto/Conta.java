@@ -1,16 +1,18 @@
 package br.com.meuprojeto;
-
 public class Conta {
+
     private int numeroConta;
     private String nomeCliente;
     private double saldo;
     private double limite;
+    private String TipoConta;
 
-    public Conta(int numeroConta, String nomeCliente, double saldo, double limite) {
+    public Conta(int numeroConta, String nomeCliente, double saldo, double limite, String TipoConta) {
         this.numeroConta = numeroConta;
         this.nomeCliente = nomeCliente;
         this.saldo = saldo;
         this.limite = limite;
+        this.TipoConta = TipoConta;
     }
     
     public Conta() {
@@ -18,6 +20,7 @@ public class Conta {
         this.nomeCliente = "";
         this.saldo = 0;
         this.limite = 0;
+        this.TipoConta = "";
     }
 
     public int getNumeroConta() {
@@ -43,6 +46,13 @@ public class Conta {
     }
     public void setLimite(double limite) {
         this.limite = limite;
+    }
+
+    public String getTipoConta() {
+        return TipoConta;
+    }
+    public void setTipoConta(String TipoConta) {
+        this.TipoConta = TipoConta;
     }
 
     boolean sacar(double valor) {
