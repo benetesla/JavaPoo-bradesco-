@@ -7,22 +7,7 @@ public class Conta {
     private double limite;
     private String TipoConta;
 
-    public Conta(int numeroConta, String nomeCliente, double saldo, double limite, String TipoConta) {
-        this.numeroConta = numeroConta;
-        this.nomeCliente = nomeCliente;
-        this.saldo = saldo;
-        this.limite = limite;
-        this.TipoConta = TipoConta;
-    }
-    
-    public Conta() {
-        this.numeroConta = 0;
-        this.nomeCliente = "";
-        this.saldo = 0;
-        this.limite = 0;
-        this.TipoConta = "";
-    }
-
+   
     public int getNumeroConta() {
         return numeroConta;
     }
