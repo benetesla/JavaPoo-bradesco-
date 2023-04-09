@@ -6,6 +6,10 @@ public class Conta {
     private double limite;
     private Cliente cliente;
 
+    Conta(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
     public void setNumero(int numero) {
         this.numero = numero;
     }

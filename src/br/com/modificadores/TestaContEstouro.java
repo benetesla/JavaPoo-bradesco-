@@ -9,7 +9,7 @@ public class TestaContEstouro {
         cliente.setCpf("12345678145");
         cliente.setIdade(20);
 
-        Conta conta = new Conta();
+        Conta conta = new Conta(cliente);
         conta.setNumero(123);
         conta.setLimite(400);
         conta.setSaldo(2000);
