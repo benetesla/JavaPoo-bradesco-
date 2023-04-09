@@ -2,7 +2,6 @@ package br.com.Arrays;
 
 public class Teste {
     public static void main(String[] args) {
-        // fibonacci com arrays
         int[] array = new int[12];
         array[0] = 0;
         array[1] = 1;
