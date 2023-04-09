@@ -5,10 +5,23 @@ public class Conta {
     private double saldo;
     private double limite;
     private Cliente cliente;
+   
 
     Conta(Cliente cliente) {
         this.cliente = cliente;
     }
+    
+
+    // chama o construtor da classe Conta* e passa os parâmetros para o construtor
+    // da classe Conta
+    Conta(int numero, double saldo, double limite, Cliente cliente) {
+        this.numero = numero;
+        this.saldo = saldo;
+        this.limite = limite;
+        this.cliente = cliente;
+    }
+
+    
 
     public void setNumero(int numero) {
         this.numero = numero;
@@ -17,6 +30,7 @@ public class Conta {
     public int getNumero() {
         return numero;
     }
+
     public void setLimite(double limite) {
         this.limite = limite;
     }
@@ -62,7 +76,5 @@ public class Conta {
             System.out.println("Saldo insuficiente");
         }
     }
-    
 
-   
 }
