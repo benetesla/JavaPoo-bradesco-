@@ -4,42 +4,49 @@ public class Casa {
     private String cor;
     private int TotalDePortas;
 
-    public Casa(String cor, int TotalDePortas) {
-        this.cor = cor;
-        this.TotalDePortas = TotalDePortas;
-    }
-
     public String getCor() {
         return cor;
     }
+
     public void setCor(String cor) {
         this.cor = cor;
     }
+
     public int getTotalDePortas() {
         return TotalDePortas;
     }
+
     public void setTotalDePortas(int TotalDePortas) {
         this.TotalDePortas = TotalDePortas;
     }
 
     public void pinta(String s) {
-        this.cor = s;
+        System.out.println("Pintando a casa de " + s);
     }
+
     public void AbrirPorta() {
-        this.TotalDePortas++;
+        System.out.println("Abrindo a porta");
     }
 
-
+    public void AdicionarPorta() {
+        double Portas = TotalDePortas;
+        Portas = Portas + 1;
+        System.out.println("Total de portas: " + Portas);
+    }
 
     public static void main(String[] args) {
-        Casa c = new Casa("Azul", 0);
+        Casa c = new Casa();
         c.pinta("Azul");
         c.AbrirPorta();
-        c.TotalDePortas = 5;
-        
-        System.out.println(c.getCor() + " " + c.getTotalDePortas());
+        c.setCor("Azul");
+        c.setTotalDePortas(3);
+        c.AdicionarPorta();
+        c.AdicionarPorta();
+        c.AdicionarPorta();
+        c.AdicionarPorta();
 
-
+        System.out.println("Cor da casa: " + c.getCor());
+        System.out.println("Total de portas: " + c.getTotalDePortas() + " portas");
 
     }
 
