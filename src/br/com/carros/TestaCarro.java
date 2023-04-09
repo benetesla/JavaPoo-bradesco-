@@ -1,4 +1,4 @@
-package br.com.Carros;
+package br.com.carros;
 
 public class TestaCarro {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package br.com.Carros;
+package br.com.carros;
 
 public class Carro {
     String cor;

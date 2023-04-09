@@ -1,4 +1,4 @@
-package br.com.Arrays;
+package br.com.arrays;
 
 public class Teste {
     public static void main(String[] args) {

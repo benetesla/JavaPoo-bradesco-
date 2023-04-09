@@ -1,4 +1,4 @@
-package br.com.Arrays;
+package br.com.arrays;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
