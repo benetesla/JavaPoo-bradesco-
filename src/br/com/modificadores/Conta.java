@@ -46,5 +46,19 @@ public class Conta {
         }
     }
 
+    public void depositar(double valor) {
+        this.saldo += valor;
+    }
+
+    public void transferir(double valor, Conta conta) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            conta.depositar(valor);
+        } else {
+            System.out.println("Saldo insuficiente");
+        }
+    }
+    
+
    
 }

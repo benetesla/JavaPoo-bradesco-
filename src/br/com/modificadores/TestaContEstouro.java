@@ -5,7 +5,8 @@ public class TestaContEstouro {
       
         Cliente cliente = new Cliente();
         cliente.setNome("João");
-        cliente.setCpf("12345678901");
+        cliente.validaCPF("12345678145");
+        cliente.setCpf("12345678145");
         cliente.setIdade(20);
 
         Conta conta = new Conta();
@@ -15,6 +16,9 @@ public class TestaContEstouro {
         conta.setCliente(cliente);
 
         conta.sacar(800);
+        conta.depositar(1000);
+        //conta.transferir(1000, conta);
+
         System.out.println("Os dados da conta são: " + "Nome: " + conta.getCliente().getNome() + " CPF: " + conta.getCliente().getCpf() + " Idade: " + conta.getCliente().getIdade() + " Saldo: " + conta.getSaldo() + " Limite: " + conta.getLimite());
     }
 }
