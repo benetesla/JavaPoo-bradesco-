@@ -1,6 +1,6 @@
 package br.com.heranca;
 
-public class Gerentes extends Funcionario {
+public class Gerente extends Funcionario {
     protected int senha;
     protected int numeroDeFuncionariosGerenciados;
 
