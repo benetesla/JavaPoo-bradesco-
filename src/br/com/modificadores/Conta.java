@@ -10,18 +10,13 @@ public class Conta {
     Conta(Cliente cliente) {
         this.cliente = cliente;
     }
-    
 
-    // chama o construtor da classe Conta* e passa os parâmetros para o construtor
-    // da classe Conta
     Conta(int numero, double saldo, double limite, Cliente cliente) {
         this.numero = numero;
         this.saldo = saldo;
         this.limite = limite;
         this.cliente = cliente;
-    }
-
-    
+    }  
 
     public void setNumero(int numero) {
         this.numero = numero;
