@@ -1,11 +1,11 @@
 package br.com.heranca;
 
 public class Funcionario {
-    private String nome;
-    private String cpf;
-    private double salario;
-    private int senha;
-    private int numeroDeFuncionarios;
+    protected String nome;
+    protected String cpf;
+    protected double salario;
+    protected int senha;
+    protected int numeroDeFuncionarios;
 
 
     public String getNome() {
@@ -39,7 +39,9 @@ public class Funcionario {
         this.numeroDeFuncionarios = numeroDeFuncionarios;
     }
     
-
+    public double getBonificacao() {
+        return this.salario * 0.10;
+    }
     public boolean auntentica(int senha) {
         if (this.senha == senha) {
             System.out.println("Acesso permitido");

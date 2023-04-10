@@ -1,8 +1,8 @@
 package br.com.heranca;
 
 public class Gerentes extends Funcionario {
-    private int senha;
-    private int numeroDeFuncionariosGerenciados;
+    protected int senha;
+    protected int numeroDeFuncionariosGerenciados;
 
     public int getSenha() {
         return senha;
@@ -18,6 +18,9 @@ public class Gerentes extends Funcionario {
 
     public void setNumeroDeFuncionariosGerenciados(int numeroDeFuncionariosGerenciados) {
         this.numeroDeFuncionariosGerenciados = numeroDeFuncionariosGerenciados;
+    }
+    public double getBonificacao() {
+        return super.getBonificacao() + 1000;
     }
 
     public boolean auntentica(int senha) {
