@@ -57,8 +57,7 @@ abstract class Funcionario extends SistemaInterno {
             System.out.println("Saque realizado com sucesso");
         } else {
             System.out.println("Saldo insuficiente");
-        }
-        
+        }        
     }
    
 }
