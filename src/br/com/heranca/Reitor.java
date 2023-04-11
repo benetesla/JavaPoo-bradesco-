@@ -27,6 +27,6 @@ public class Reitor {
     public void setCurso(String curso) {
         this.curso = curso;
     }
-    
+
     
 }

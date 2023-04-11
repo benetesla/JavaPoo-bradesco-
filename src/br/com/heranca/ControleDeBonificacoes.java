@@ -6,10 +6,10 @@ public class ControleDeBonificacoes {
     public void registra(Funcionario f) {
         double boni = f.getBonificacao();
         this.soma = this.soma + boni;
-        System.out.println("Bonificação do funcionário: " + boni  + " R$" );   
+        System.out.println("Bonificação do funcionário: " + boni + " R$");
     }
 
     public double getSoma() {
-        return soma;
+        return this.soma;
     }
 }

@@ -1,6 +1,6 @@
 package br.com.heranca;
 
-public class Funcionario {
+abstract class Funcionario extends SistemaInterno {
     protected String nome;
     protected String cpf;
     protected double salario;
@@ -39,9 +39,7 @@ public class Funcionario {
         this.numeroDeFuncionarios = numeroDeFuncionarios;
     }
     
-    public double getBonificacao() {
-        return this.salario * 0.10;
-    }
+   abstract double getBonificacao();
     public boolean auntentica(int senha) {
         if (this.senha == senha) {
             System.out.println("Acesso permitido");
@@ -51,5 +49,5 @@ public class Funcionario {
             return false;
         }
     }
-
+   
 }
