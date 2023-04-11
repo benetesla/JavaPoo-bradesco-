@@ -18,8 +18,6 @@ public class TestaGerente {
         System.out.println(autenticou);
         boolean autenticou2 = funcionario2.auntentica(1235);
         System.out.println(autenticou2);
-
-
         
     }
 }

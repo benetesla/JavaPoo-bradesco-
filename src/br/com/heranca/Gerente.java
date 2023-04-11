@@ -3,7 +3,7 @@ package br.com.heranca;
 public class Gerente extends Funcionario {
     protected int senha;
     protected int numeroDeFuncionariosGerenciados;
-
+    
     public int getSenha() {
         return senha;
     }
