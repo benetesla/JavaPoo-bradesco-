@@ -1,6 +1,6 @@
 package br.com.heranca;
 
-public abstract class Gerente extends Funcionario {
+public abstract class Gerente extends Funcionario  implements Auntenticavel {
     protected int senha;
     protected int numeroDeFuncionariosGerenciados;
     
@@ -23,7 +23,7 @@ public abstract class Gerente extends Funcionario {
     abstract double getBonificacao();
 
     public boolean auntentica(int senha) {
-        if (this.senha == senha) {
+        if (this.senha != senha) {
             System.out.println("Acesso permitido");
             return true;
         } else {
@@ -31,4 +31,16 @@ public abstract class Gerente extends Funcionario {
             return false;
         }
     }
+
+    public void sacar(double valor) {
+        double Salario = this.getSalario();
+          if (valor <= Salario) {
+              Salario -= valor;
+              this.setSalario(Salario);
+              System.out.println("Saque realizado com sucesso");
+          } else {
+              System.out.println("Saldo insuficiente");
+          }
+          
+      }
 }

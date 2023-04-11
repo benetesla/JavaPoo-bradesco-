@@ -49,5 +49,16 @@ abstract class Funcionario extends SistemaInterno {
             return false;
         }
     }
+    public void sacar(double valor) {
+      double Salario = this.getSalario();
+        if (valor <= Salario) {
+            Salario -= valor;
+            this.setSalario(Salario);
+            System.out.println("Saque realizado com sucesso");
+        } else {
+            System.out.println("Saldo insuficiente");
+        }
+        
+    }
    
 }
